@@ -8,18 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/medium.css">
+    
 </head>
 <body>
     <header>
         <nav>
-            <!-- <img src="images/logo.png" alt="logo"> -->
-             <a href="#" class="logo-container">Temple Inn & Suites</a> 
+            <img src="images/logo.png" class="logo" alt="logo">
+            <!-- <a href="#" class="logo-container">Temple Inn & Suites</a> -->
             <ul class="navbar">
-                <li><a href="" class="active">Home</a></li>
-                <li><a href="">Temple</a></li>
-                <li><a href="">Reservation</a></li>
-                <li><a href="">Services</a></li>
+                <li><a href="https://marcosbarrozo.github.io/temple/" class="active">Home</a></li>
+                <li><a href="https://marcosbarrozo.github.io/temple/temple.html">Temple</a></li>
+                <li><a href="https://marcosbarrozo.github.io/temple/reservation.html">Reservation</a></li>
+                <li><a href="https://marcosbarrozo.github.io/temple/services.html">Services</a></li>
             </ul>
             <img src="images/list.svg" class="menu-icon" alt="">
         </nav>
@@ -55,13 +58,41 @@
         </div>
         <aside>
             <div class="weather">
-                <h2>Weather</h2>
+                <h2>Current Weather</h2>
                 <div class="img-temp-container">
                     <img src = "#" alt="weather" id="weather-icon">
                     <h2 class="temp-text"><span id="temperature"></span>°F</h2>
                 </div>
                 <p id="condition"></p>
-                <p id="humidity"></p>
+                <p>Humidity: <span id="humidity"></span></p>
+
+            </div>
+            <div class="forecast">
+                <h2>Day One</h2>
+                <div class="img-temp-container">
+                    <img src = "#" alt="weather" id="day1-weather-icon">
+                    <h2 class="day1-temp-text"><span id="day1-temperature"></span>°F</h2>
+                </div>
+                <p id="day1-condition"></p>
+                <p>Humidity: <span id="day1-humidity"></span></p>
+            </div>
+            <div class="forecast">
+                <h2>Day Two</h2>
+                <div class="img-temp-container">
+                    <img src = "#" alt="weather" id="day2-weather-icon">
+                    <h2 class="day2-temp-text"><span id="day2-temperature"></span>°F</h2>
+                </div>
+                <p id="day2-condition"></p>
+                <p>Humidity: <span id="day2-humidity"></span></p>
+            </div>
+            <div class="forecast">
+                <h2>Day Three</h2>
+                <div class="img-temp-container">
+                    <img src = "#" alt="weather" id="day3-weather-icon">
+                    <h2 class="day3-temp-text"><span id="day3-temperature"></span>°F</h2>
+                </div>
+                <p id="day3-condition"></p>
+                <p>Humidity: <span id="day3-humidity"></span></p>
             </div>
         </aside>
     </main>

@@ -13,6 +13,7 @@ header{
 header nav{
     display: flex;
     justify-content:  space-around;
+    align-items: center;
 } 
 
 .logo-container{
@@ -22,7 +23,8 @@ header nav{
     font-family: 'Montserrat', sans-serif;
 }
 .logo{
-    max-width:150px;
+    max-width: 150px;
+    filter: invert(95%) sepia(35%) saturate(2699%) hue-rotate(183deg) brightness(115%) contrast(102%);
 }
 header nav ul{
     display: flex;
@@ -230,6 +232,57 @@ header nav ul li a:hover{
     border-radius: .8rem;
     cursor: pointer;
 }
+
+/*Weather*/
+aside{
+    width: 20%;
+}
+#forecast-title{
+    text-align: center;
+    margin: .5rem auto;
+    font-size: 1.2rem;
+    color: #bb0a21;
+}
+.weather{
+    border: 2px solid #133c55;
+    padding:.8rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,.5);
+
+
+}
+.weather h2 {
+    color: #bb0a21;
+    text-align: center;
+}
+.forecast h2{
+    font-size: 1.3rem;
+    color: #bb0a21;
+    text-align: center;
+}
+.forecast{
+    border: 2px solid #133c55;
+    margin: 1rem 0;
+    padding: .8rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,.5);
+}
+.img-temp-container{
+    display: flex;
+    align-items: center;
+    padding: .8rem;
+}
+.img-temp-container img{
+    width: 70%;
+}
+#weather-icon{
+    width: 80%;
+    height: auto;
+}
+.weather p, .forecast p{
+    text-align: center;
+    margin: .5rem 0;
+    text-transform: uppercase;
+}
+
 footer{
     text-align: center;
     background-color: #386fa4;
