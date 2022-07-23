@@ -21,7 +21,9 @@ header nav{
     font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
 }
-
+.logo{
+    max-width:150px;
+}
 header nav ul{
     display: flex;
     list-style: none;
