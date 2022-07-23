@@ -1,0 +1,42 @@
+{
+    "temples": [
+      {
+        "name": "Recife Brazil Temple",
+        "address": "Rua Dr. José de Góes, 280. Parnamirim, Recife - PE, Brazil",
+        "phone": "(55) 81-2129-4300",
+        "services": ["Clothing rental available", "No cafeteria available", "Patron housing available", "Distribution center nearby"],
+	"history":"",
+        "image": "recife_small.jpg",
+	"temple_closure":["Saturday, 1 October 2022", "Monday, 3 October 2022 - Monday, 17 October 2022", "Saturday, 24 December 2022", "Saturday, 31 December 2022"]
+ 
+      },{
+        "name": "Curitiba Brazil Temple",
+        "address": "Rua Deputado Heitor Alencar Furtado, 3641. Mossunguê, Curitiba - PR, Brazil,",
+        "phone": "(55) 41-3204-6650",
+        "services": ["No clothing rental available", "No cafeteria available", "No patron housing available", "Distribution center nearby"],
+	"history":"",
+        "image": "curitiba.jpg",
+	"temple_closure":["Monday, 11 July 2022 - Monday, 19 September 2022", "Saturday, 1 October 2022", "Saturday, 24 December 2022", "Saturday, 31 December 2022"]
+ 
+      },{
+        "name": "Porto Alegre Brazil Temple",
+        "address": "Rua General Salvador Pinheiro, 50. Vila Jardim, Porto Alegre - RS, Brazil",
+        "phone": "(55) 51-2104-2700",
+        "services": ["No clothing rental available", "No cafeteria available", "Patron housing available", "Distribution center nearby"],
+	"history":"",
+        "image": "porto_alegre.jpg",
+	"temple_closure":["Monday, 1 August 2022 - Monday, 2 January 2023"]
+ 
+      },{
+        "name": "São Paulo Brazil Temple",
+        "address": "Av. Prof. Francisco Morato, 2390. Caxingui, São Paulo - SP, Brazil",
+        "phone": "(55) 11-3723-7600",
+        "services": ["Clothing rental available", "No cafeteria available", "Patron housing available", "Distribution center nearby"],
+	"history":"",
+        "image": "sao_paulo.jpeg",
+	"temple_closure":["Monday, 1 August 2022 - Monday, 15 August 2022", "Wednesday, 7 September 2022", "Saturday, 1 October 2022", "Saturday, 24 December 2022", "Saturday, 31 December 2022"]
+ 
+      }
+	
+]
+}
