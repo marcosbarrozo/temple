@@ -1,0 +1,5 @@
+@media (min-width: 860px) {
+    .wedding-reception h2,  .food h2{
+        font-size: 2rem;
+    }
+}

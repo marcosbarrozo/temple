@@ -35,6 +35,20 @@ header nav ul li{
     margin: 0 .5rem;
 }
 
+header nav ul li ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #133c55;
+}
+header nav ul li ul li {
+    display: none;
+}
+header nav ul li:hover>ul li{
+    display: block;
+}
+
+
 header nav ul li a {
     display: block;
     padding: .5rem .8rem;
@@ -180,23 +194,49 @@ header nav ul li a:hover{
 .form-container p{
     text-align: center;
 }
+#close-btn{
+    display: none;
+    transition: all .3s ease;
+}
 @media (max-width: 930px){
+    header nav ul li ul{
+        display: block;
+        color: white;
+    }
+    header nav ul li:hover>ul li{
+        display: block;
+    }
+    
     .menu-icon{
         display: block;
+    }
+    #close-btn{
+        display: block;
+        filter: invert(95%) sepia(35%) saturate(2699%) hue-rotate(183deg) brightness(115%) contrast(102%);
+        cursor: pointer;
+        padding: .5rem;
+        width: 48px;
+        position: absolute;
+        right:.5rem;
+        top: .5rem;
+    }
+    #close-btn:hover{
+        transform: rotate(45deg);
     }
     header nav ul{
         position: fixed;
         display: block;
         width: 100%;
-        top: 5rem;
+        top: 0;
         background-color: #133c55;
         height: 100vh;
         left: -100%;
         text-align: center; 
-        border-top: 2px solid silver;      
+        border-top: 2px solid silver;  
+        z-index:9999;    
     }
     header nav ul li a{
-        margin: 2rem 0;
+        margin: 3rem 0;
     }
     header nav ul li a:hover{
         color: rgb(255, 253, 253);
@@ -506,5 +546,85 @@ footer p {
 }
 .services ul{
     margin-left: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*reception*/
+.reception{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.images{
+    grid-column: 1/3;
+}
+.wedding-reception{
+    padding: 1rem;
+}
+.wedding-reception h2{
+    color: #bb0a21;
+    text-align: center;
+    margin: .5rem;
+}
+.wedding-reception img{
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,0.5);
+}
+.food h2{
+    color: #bb0a21;
+    text-align: center;
+    margin: .5rem;
+}
+.food p{
+    margin: .5rem 0;
+    font-family: 'Roboto', sans-serif;
+}
+.food ul{
+    margin-left: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+.food-images{
+    display: grid;
+    gap: 1rem;
+}
+.food-images img, .gallery img{
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(0,0,0,0.5);
+}
+#food-title{
+    color: #bb0a21;
+    text-align: center;
+    margin: .5rem;
+    grid-column: 1/3;
+}
+
+/*Full-time*/
+.full-time{
+    max-width: 1000px;
+    margin: 1.5rem auto;
+}
+.gallery img{
+    display: block;
+    width: 70%;
+    margin:.5rem auto;
+}
+
+.full-time .form-container h2, .full-time h2{
+    color: #bb0a21;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.full-time p{
+    margin: 1rem;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
 }
