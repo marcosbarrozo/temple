@@ -12,4 +12,11 @@
         gap: .5rem;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+
+    .reservation-form{
+        grid-column: 1/3;
+    }
+    .reservation-image{
+        grid-column: 1/3;
+    }
 }
