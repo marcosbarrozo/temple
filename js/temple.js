@@ -1,19 +1,24 @@
 //https://marcosbarrozo.github.io/wdd230/temple/data/data.json
 const requestURL = 'data/data.json';
 const cards = document.querySelector('.cards');
+let id_list = getList();
 
-fetch(requestURL)
+
+function loadTemples(){
+  fetch(requestURL)
   .then(function (response) {
     return response.json();
   })
   .then(function (jsonObject) {
-    console.table(jsonObject);  
     const temples = jsonObject['temples'];
     temples.forEach(displayTemple);
 });
+}
+
+loadTemples();
 
 function displayTemple(temples) {
-    // Create elements to add to the document
+    
     let card = document.createElement('section');
     let name = document.createElement('h2');
     let image = document.createElement('img');
@@ -22,6 +27,15 @@ function displayTemple(temples) {
     let services = document.createElement('ul');
     let temple_closure = document.createElement("ul");
     let services_title = document.createElement('h3');
+
+    let like = document.createElement('img');    
+    like.setAttribute('class', `like`);
+
+    if(isInLike(temples.id)){
+      like.setAttribute('src','images/star-fill.svg')
+    } else {
+      like.setAttribute('src','images/star.svg')
+    }  
 
     temples.services.forEach(function(service){
       let li = document.createElement("li");
@@ -42,7 +56,7 @@ function displayTemple(temples) {
      
     image.setAttribute('src', `images/${temples.image}`);
     image.setAttribute('alt', `${temples.name}`);
-    //image.setAttribute('loading', 'lazy');
+  
   
     
     card.appendChild(image);
@@ -51,10 +65,10 @@ function displayTemple(temples) {
     card.appendChild(services);
     card.appendChild(phone);  
     card.appendChild(address);
+    card.appendChild(like);
     
     card.addEventListener("click",function(){
       showModal(temples);
-      console.log('click')
     });
 
     document.querySelector('div.cards').appendChild(card);
@@ -68,7 +82,9 @@ function showModal(temples){
   close_btn.innerHTML = "&times;";
   close_btn.addEventListener("click", function(){
     temple_container.classList.remove("show-modal");
-    console.log("teste")
+    cards.innerHTML = "";
+    loadTemples();
+
   });
 
 
@@ -82,6 +98,35 @@ function showModal(temples){
   let temple_closure = document.createElement("ul");
   let services_title = document.createElement('h3');
   let temple_closure_title = document.createElement('h3');
+  let like = document.createElement('img');
+
+  if(isInLike(temples.id)){
+    like.setAttribute('src','images/star-fill.svg')
+  } else {
+    like.setAttribute('src','images/star.svg')
+  }
+
+  like.setAttribute('class', `like`);
+
+  like.addEventListener('click',function(){
+
+    if(isInLike(temples.id)){
+      like.setAttribute('src', `images/star.svg`);
+     
+      let value = temples.id
+      id_list = id_list.filter(function(item) {
+      return item !== value
+})
+      setList(id_list);
+    } else {
+      console.log("id list"+id_list)
+        id_list.push(temples.id);
+        like.setAttribute('src', `images/star-fill.svg`);
+        setList(id_list);
+      }
+
+    }
+  );
 
   close_btn.setAttribute("class","close");
   card.appendChild(close_btn);
@@ -118,9 +163,29 @@ function showModal(temples){
   card.appendChild(temple_closure);
   card.appendChild(phone);  
   card.appendChild(address);
+  card.appendChild(like);
 
   temple_container.appendChild(card);
 
-
 }
+function isInLike(id){
+  let list = getList();
+  if (list){
+    if(list.includes(id)){
+      return true
+    } else {
+      return false;
+    }
+
+  }}
+
+function getList(){
+  
+  return localStorage.getItem("id_list")?JSON.parse(localStorage.getItem("id_list")):[];
+}
+
+function setList(list){
+  localStorage.setItem("id_list", JSON.stringify(list));
+}
+
   
