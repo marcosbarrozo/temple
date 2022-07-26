@@ -30,6 +30,7 @@ function displayTemple(temples) {
 
     let like = document.createElement('img');    
     like.setAttribute('class', `like`);
+  like.setAttribute('alt', `like button`);
 
     if(isInLike(temples.id)){
       like.setAttribute('src','images/star-fill.svg')
@@ -99,6 +100,7 @@ function showModal(temples){
   let services_title = document.createElement('h3');
   let temple_closure_title = document.createElement('h3');
   let like = document.createElement('img');
+  like.setAttribute('alt', `like button`);
 
   if(isInLike(temples.id)){
     like.setAttribute('src','images/star-fill.svg')
