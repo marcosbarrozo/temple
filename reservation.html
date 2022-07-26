@@ -42,15 +42,19 @@
         <form action="" class="reservation-form">
             <h2>Make Reservation</h2>
             <label for="name">Full Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" required>
             <label for="date">Date</label>
-            <input type="date" name="date" id="date">
+            <input type="date" name="date" id="date" required>
+            <label for="location">Location</label>
+            <input type="text" name="location" id="location" required>
+            <label for="rooms">Number of Rooms</label>
+            <input type="number" name="rooms" id="rooms" required>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
             <label for="number">Phone</label>
-            <input type="text" pattern="[0-9]{3,}" title="Please enter only numbers!" name="number" id="number">
+            <input type="text" pattern="[0-9]{3,}" title="Please enter only numbers!" required name="number" id="number">
             <label for="country">Country</label>
-            <input type="text" name="country" id="country">
+            <input type="text" name="country" id="country" required>
             <label for="comments">Comments</label>
             <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
             <button type="submit">Make my Reservation</button>
@@ -60,8 +64,8 @@
         <div class="footer-left">
             <p>Follow Us On social Media</p>
             <div class="social-container">
-                <img src="images/facebook.svg" alt="facebook logo">
-                <img src="images/instagram.svg" alt="instagram logo">
+                <a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="facebook logo"></a>
+                <a href="https://www.instagram.com/"><img src="images/instagram.svg" alt="instagram logo"></a>
             </div>
             <p>4867 Montgomery Ln #300, Bethesda, MD 20814</p>
             <p>&copy; copyright 2022. All rights reserved </p>
